@@ -1,0 +1,148 @@
+蜂鸟 启动！
+=================================================
+
+.. note:: 如若需要运行蜂鸟，一定要焊接两个flash
+
+.. contents:: 本文目录
+
+烧录GD32F150程序
+-------------------------------------------------
+
+1. 使用swd接口进行烧录，这里我们使用st-flash进行烧录。
+#. **焊接（或者用按着）** *swdio* 和 *swclk* 到 *stlink对应接口*。（位置参考前文引脚图）
+#. 打开cmd命令行，进入 *st-flash\\bin* ，执行指令
+
+    ``st-flash.exe write flash.bin 0x08000000``
+
+烧录成功显示结果为:
+
+.. figure:: http://odfef978i.bkt.clouddn.com/E203_download.png
+  :width: 500px
+  :align: center
+
+  烧录成功-控制台输出示例
+
+烧录成功后将LicheeTang插上电脑可以看到，在TD软件下载页面中也可以看到设备。如果没看到，请安装驱动，参照TD使用说明；
+
+.. figure:: http://odfef978i.bkt.clouddn.com/E203_device.png
+  :width: 250px
+  :align: center
+
+  设备管理界面
+
+烧录FPGA BitStream
+-------------------------------------------------
+
+1. 打开TD软件，选择 *download*
+
+    .. figure:: http://odfef978i.bkt.clouddn.com/E203_TD_download.png
+        :width: 600px
+        :align: center
+
+#. 添加 bitstream文件，选择 **LicheeTang\_E203\.bit** （需要显示已有设备）
+
+    .. figure:: http://odfef978i.bkt.clouddn.com/E203_TD_add.png
+        :width: 600px
+        :align: center
+
+#. 如果 Mode 为 *JTAG*，断电后则恢复默认，所以为了保存 bitstream，需要选择 **PROGRAM FLASH** 。（时间较长）
+#. 如果需要进行修改，请使用我们提供的源码自行进行修改。（e203mini_new.tar.gz）
+
+搭建蜂鸟开发环境
+-------------------------------------------------
+
+下载交叉编译工具链
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+百度网盘链接为: https://pan.baidu.com/s/1eUbBlVc
+
+由于这里提供的openocd不支持LicheeTang使用的flash型号，所以进行了一些修改，请使用压缩包中的进行替换
+
+配置工作环境
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. ``git clone https://github.com/SI-RISCV/e200_opensource.git 从github下载e200_opensource``
+#. 将 *sirv-e203-lichee.tar.gz* 解压至 *e200_opensource/sirv-e-sdk/bsp/env* 目录下
+#. 将下载好的交叉工具编译链以及 openocd 解压，在 *e200_opensource/sirv-e-sdk/work* 目录下将其分别软连接到:
+
+    .. code-block:: sh
+        :emphasize-lines: 5,9
+
+        .
+        └── build
+        ├── openocd
+        │   └── prefix
+        │       └── bin -> /opt/riscv/gnu-mcu-eclipse/openocd/0.10.0-6-20180112-1448/bin/
+        └── riscv-gnu-toolchain
+        └── riscv32-unknown-elf
+        └── prefix
+        └── bin -> /opt/riscv/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-2-20180111-2230/bin/
+    
+    高亮目录需要修改为实际的目录
+
+蜂鸟的调试
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+我们使用ft2232d与openocd进行蜂鸟的调试，所以需要进行一些配置
+
+1. 将ft2232d插入电脑，执行lsusb，可看到一下信息
+
+    *Bus 003 Device 019: ID 0403:6010 Future Technology Devices International, Ltd FT2232C Dual USB-UART/FIFO IC*
+
+2. 设置 *udev rules*,使 ft2232d 能够被 *plugdev group* 访问
+
+    .. parsed-literal::
+    
+        vim /etc/udev/rules.d/45-ft2232.rules 
+
+        ATTR{idVendor}=="0403", ATTR{idProduct}=="6010", MODE="660", GROUP="plugdev"
+
+3. 查看该设备是否属于 *plugdev*
+
+    .. parsed-literal::
+    
+        ls -l /dev/ttyUSB1
+    
+        crw-rw---- 1 root plugdev 188, 1 7月  11 09:13 /dev/ttyUSB1
+
+4. 将你自己的用户添加到 *plugdev group* 中
+
+    .. parsed-literal::
+
+        whoami
+        sudo usermod –a –G plugdev your user name
+
+5. 确认你自己的用户是否属于 *plugdev group*
+
+    .. parsed-literal::
+
+        groups
+
+编译下载demo程序
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+编译下载demo程序，可参考文件夹下的demo_gpio.tar.gz
+
+在e200_opensource/sirv-e-sdk目录下执行
+
+    编译： ``make software PROGRAM=demo_gpio BOARD=sirv-e203-lichee``
+    
+    上传： ``make upload PROGRAM=demo_gpio BOARD=sirv-e203-lichee``
+
+调试
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+打开两个terminal，一个运行openocd，另外一个运行gdb
+	
+    openocd: ``make run_openocd PROGRAM=demo_gpio BOARD=sirv-e203- lichee``
+
+    GDB: ``make run_gdb PROGRAM= demo_gpio BOARD=sirv-e203- lichee``
+
+.. tip:: 可能写的不是很清楚，如果有任何疑问欢迎提出，或者参看胡大的《手把手教你设计CPU：RISC-V处理器》（已经上市，请在京东、淘宝、当当上搜索 RISC-V关键字）
+
+
+
+
+
+
+
