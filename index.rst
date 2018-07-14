@@ -45,7 +45,7 @@
 
 您可能需要这些来进一步了解荔枝糖： `EG4S20 Datasheet <http://odfef978i.bkt.clouddn.com/EG4S20_DataSheet_V1.4.pdf>`_ | `荔枝糖原理图 <http://odfef978i.bkt.clouddn.com/LicheeTang_RV.pdf>`_
 
-荔枝糖仍在不断地成长，对于外观、电路设计、文档内容甚至于荔枝糖的发展方向，我们都欢迎您到 `荔枝糖 | 建议与讨论帖 <http://bbs.lichee.pro/d/61-->`_ 提出您宝贵的建议。
+荔枝糖仍在不断地成长，对于外观、电路设计、文档内容甚至于荔枝糖的发展方向，我们欢迎您到 `荔枝糖 | 建议与讨论帖 <http://bbs.lichee.pro/d/61-->`_ 提出您宝贵的建议。
  
 同时欢迎各位加入 `荔枝派交流群573832310 <https://jq.qq.com/?_wv=1027&k=5qc9P07>`_ | `荔枝派Telegram电报群 <https://t.me/joinchat/HH5CKkoLTnnxtdIl2U1Psg>`_ 与众多开发者、爱好者即时交流。
 
