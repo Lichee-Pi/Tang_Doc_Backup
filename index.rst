@@ -41,7 +41,14 @@
 .. figure:: http://odfef978i.bkt.clouddn.com/E203_pin.png
   :align: center
   
-  荔枝糖引脚图
+  荔枝糖引脚图(旧板,底面丝印较小版本)
+
+.. figure:: https://fdvad021asfd8q.oss-cn-hangzhou.aliyuncs.com/LicheeTang/Lichee-tang_IoMap.svg
+  :align: center
+
+  荔枝派引脚图(新板,底面丝印较大版本)
+
+  ``现在发货默认烧录的为旧板BitStream，需要重新烧录BitStream，在群文件中下载``
 
 您可能需要这些来进一步了解荔枝糖： `EG4S20 Datasheet <http://odfef978i.bkt.clouddn.com/EG4S20_DataSheet_V1.4.pdf>`_ | `荔枝糖原理图 <http://odfef978i.bkt.clouddn.com/LicheeTang_RV.pdf>`_
 
