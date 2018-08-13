@@ -1,7 +1,7 @@
 安装TD驱动
 =================================================
 
-#0.LicheeTang默认已经烧录了GD32下载器的固件，在没有安装驱动的情况下插到电脑上可在设备管理器中看到WinUSB Device，也许是未识别设备，不过设备的VID PID为0547_1002
+#0.LicheeTang默认已经烧录了GD32下载器的固件，在没有安装驱动的情况下插到电脑上可在设备管理器中看到WinUSB Device，也许是未识别设备，不过设备的VID_PID为0547_1002
 
 .. figure:: https://fdvad021asfd8q.oss-cn-hangzhou.aliyuncs.com/LicheeTang/get_started/no_driver.png
   :align: center
@@ -37,20 +37,3 @@
   :width: 400px
 
 恭喜，你已经成安装td的驱动。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

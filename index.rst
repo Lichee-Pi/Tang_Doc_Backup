@@ -68,8 +68,34 @@ https://pan.baidu.com/s/12kXWqTVMkle4W46Yhaz7mg
    :maxdepth: 2
    :caption: 上手体验篇
 
-   GD32固件下载 <get_started/gd_download>
-   安装TD驱动 <get_started/driver>
-   FPGA码流下载 <get_started/fpga_download>
-   蜂鸟开发环境搭建 <get_started/E203>
-   TD简要使用使用说明 <get_started/td>
+   get_started/gd_download
+   get_started/driver
+   get_started/fpga_download
+   get_started/E203
+   get_started/td
+
+.. toctree::
+  :maxdepth: 2
+  :caption: FPGA例程
+
+  fpga/led
+  fpga/dvp
+  fpga/display
+  fpga/sdram
+  fpga/ics
+  fpga/opencores
+
+.. toctree::
+  :maxdepth: 2
+  :caption: 蜂鸟例程
+
+  e203/ft2232
+  e203/peripherals
+  e203/led
+  e203/display
+  e203/int
+  e203/sensor
+  e203/rv_ip
+
+
+   

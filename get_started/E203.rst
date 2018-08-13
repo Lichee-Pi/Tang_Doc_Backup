@@ -1,27 +1,23 @@
-蜂鸟 启动！
+搭建蜂鸟开发环境
 =================================================
 
 .. contents:: 本文目录
 
 .. note:: 现已经做好了  `虚拟机镜像 <https://pan.baidu.com/s/1_ODpTyHMaP7Lp5Fd3p2PEg>`_ ，可直接使用
 
-
-搭建蜂鸟开发环境
--------------------------------------------------
-
 下载交叉编译工具链
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 百度网盘链接为: https://pan.baidu.com/s/1eUbBlVc
 
-由于这里提供的openocd不支持LicheeTang使用的flash型号，所以进行了一些修改，请使用压缩包中的进行替换
+由于这里提供的openocd不支持LicheeTang使用的flash型号，所以进行了一些修改，请 `下载 <https://fdvad021asfd8q.oss-cn-hangzhou.aliyuncs.com/LicheeTang/get_started/openocd>`_ 新的进行替换
 
 配置工作环境
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. ``git clone https://github.com/SI-RISCV/e200_opensource.git`` 从github下载e200_opensource
-#. 将 *sirv-e203-lichee.tar.gz* 解压至 *e200_opensource/sirv-e-sdk/bsp/env* 目录下
-#. 将下载好的交叉工具编译链以及 openocd 解压，在 *e200_opensource/sirv-e-sdk/work* 目录下将其分别软连接到:
+#. 将 `sirv-e203-lichee.tar.gz <https://fdvad021asfd8q.oss-cn-hangzhou.aliyuncs.com/LicheeTang/get_started/sirv-e203-lichee.tar.gz>`_ 解压至 *e200_opensource/sirv-e-sdk/bsp/env* 目录下
+#. 将下载好的交叉工具编译链以及 openocd 解压(记得使用新的openocd替换)，在 *e200_opensource/sirv-e-sdk/work* 目录下将其分别软连接到:
 
     .. code-block:: sh
         :emphasize-lines: 5,9
