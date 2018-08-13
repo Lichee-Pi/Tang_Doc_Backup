@@ -68,5 +68,8 @@ https://pan.baidu.com/s/12kXWqTVMkle4W46Yhaz7mg
    :maxdepth: 2
    :caption: 上手体验篇
 
+   GD32固件下载 <get_started/gd_download>
    安装TD驱动 <get_started/driver>
-   蜂鸟 启动！ <get_started/E203>
+   FPGA码流下载 <get_started/fpga_download>
+   蜂鸟开发环境搭建 <get_started/E203>
+   TD简要使用使用说明 <get_started/td>

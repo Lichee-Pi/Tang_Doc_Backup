@@ -3,50 +3,8 @@
 
 .. contents:: 本文目录
 
-烧录GD32F150程序
--------------------------------------------------
+.. note:: 现已经做好了  `虚拟机镜像 <https://pan.baidu.com/s/1_ODpTyHMaP7Lp5Fd3p2PEg>`_ ，可直接使用
 
-1. 使用swd接口对板载的 GD32F150 芯片进行烧录，写入 FPGA JTAG 的调试器固件。调试器固件可在 `anlogic-usbjtag <https://github.com/Lichee-Pi/anlogic-usbjtag>`_ 处下载，这里我们使用st-flash进行烧录。亦可使用 STVP 下载，但是注意看门狗启动一定要关掉，否则会导致芯片不断复位！
-#. **焊接（或者用按着/调试夹子）** *swdio* 和 *swclk* 到 *stlink对应接口*。（位置参考前文引脚图）
-#. 打开cmd命令行，进入 *st-flash\\bin* ，执行指令
-
-    ``st-flash.exe write flash.bin 0x08000000``
-
-烧录成功显示结果为:
-
-.. figure:: http://odfef978i.bkt.clouddn.com/E203_download.png
-  :width: 500px
-  :align: center
-
-  烧录成功-控制台输出示例
-
-烧录成功后将LicheeTang插上电脑可以看到，在TD软件下载页面中也可以看到设备。如果没看到，请安装驱动，参照TD使用说明；
-
-.. figure:: http://odfef978i.bkt.clouddn.com/E203_device.png
-  :width: 250px
-  :align: center
-
-  设备管理界面
-
-***发货默认已烧录GD32固件，仅在固件丢失的时候需进行重新烧录***
-
-烧录FPGA BitStream
--------------------------------------------------
-
-1. 打开TD软件，选择 *download*
-
-    .. figure:: http://odfef978i.bkt.clouddn.com/E203_TD_download.png
-        :width: 600px
-        :align: center
-
-#. 添加 bitstream文件，选择 **LicheeTang\_E203\.bit** （需要显示已有设备）
-
-    .. figure:: http://odfef978i.bkt.clouddn.com/E203_TD_add.png
-        :width: 600px
-        :align: center
-
-#. 如果 Mode 为 *JTAG*，断电后则恢复默认，所以为了保存 bitstream，需要选择 **PROGRAM FLASH** 。（时间较长）
-#. 如果需要进行修改，请使用我们提供的源码自行进行修改。（e203mini_new.tar.gz）
 
 搭建蜂鸟开发环境
 -------------------------------------------------
@@ -77,7 +35,7 @@
         └── riscv32-unknown-elf
         └── prefix
         └── bin -> /opt/riscv/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-2-20180111-2230/bin/
-    
+
     高亮目录需要修改为实际的目录
 
 蜂鸟的调试
@@ -92,17 +50,17 @@
 2. 设置 *udev rules*,使 ft2232d 能够被 *plugdev group* 访问
 
     .. parsed-literal::
-    
-        vim /etc/udev/rules.d/45-ft2232.rules 
+
+        vim /etc/udev/rules.d/45-ft2232.rules
 
         ATTR{idVendor}=="0403", ATTR{idProduct}=="6010", MODE="660", GROUP="plugdev"
 
 3. 查看该设备是否属于 *plugdev*
 
     .. parsed-literal::
-    
+
         ls -l /dev/ttyUSB1
-    
+
         crw-rw---- 1 root plugdev 188, 1 7月  11 09:13 /dev/ttyUSB1
 
 4. 将你自己的用户添加到 *plugdev group* 中
@@ -126,23 +84,16 @@
 在e200_opensource/sirv-e-sdk目录下执行
 
     编译： ``make software PROGRAM=demo_gpio BOARD=sirv-e203-lichee``
-    
+
     上传： ``make upload PROGRAM=demo_gpio BOARD=sirv-e203-lichee``
 
 调试
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 打开两个terminal，一个运行openocd，另外一个运行gdb
-	
+
     openocd: ``make run_openocd PROGRAM=demo_gpio BOARD=sirv-e203- lichee``
 
     GDB: ``make run_gdb PROGRAM= demo_gpio BOARD=sirv-e203- lichee``
 
 .. tip:: 可能写的不是很清楚，如果有任何疑问欢迎提出，或者参看胡大的《手把手教你设计CPU：RISC-V处理器》（已经上市，请在京东、淘宝、当当上搜索 RISC-V关键字）
-
-
-
-
-
-
-
