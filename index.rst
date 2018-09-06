@@ -68,7 +68,6 @@ https://pan.baidu.com/s/12kXWqTVMkle4W46Yhaz7mg
    :maxdepth: 2
    :caption: 上手体验篇
 
-   get_started/gd_download
    get_started/driver
    get_started/fpga_download
    get_started/E203
@@ -96,6 +95,3 @@ https://pan.baidu.com/s/12kXWqTVMkle4W46Yhaz7mg
   e203/int
   e203/sensor
   e203/rv_ip
-
-
-   
