@@ -69,6 +69,7 @@ https://pan.baidu.com/s/12kXWqTVMkle4W46Yhaz7mg
    :caption: 上手体验篇
 
    get_started/driver
+   get_started/driver_linux
    get_started/fpga_download
    get_started/E203
    get_started/td
