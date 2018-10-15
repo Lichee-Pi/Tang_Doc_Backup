@@ -54,13 +54,13 @@
 
 荔枝糖仍在不断地成长，对于外观、电路设计、文档内容甚至于荔枝糖的发展方向，我们欢迎您到 `荔枝糖 | 建议与讨论帖 <http://bbs.lichee.pro/d/61-->`_ 提出您宝贵的建议。
 
-同时欢迎各位加入 `荔枝派交流群573832310 <https://jq.qq.com/?_wv=1027&k=5qc9P07>`_ | `荔枝派Telegram电报群 <https://t.me/joinchat/HH5CKkoLTnnxtdIl2U1Psg>`_ 与众多开发者、爱好者即时交流，并获取 FPGA 开发环境 TD (Tang Dynasty)，其中 TD 软件自带全系列的参考文档。
+同时欢迎各位加入 `荔枝派交流群826307240 <https://jq.qq.com/?_wv=1027&k=5uWO21P>`_ | `荔枝派Telegram电报群 <https://t.me/joinchat/HH5CKkoLTnnxtdIl2U1Psg>`_ 与众多开发者、爱好者即时交流，并获取 FPGA 开发环境 TD (Tang Dynasty)，其中 TD 软件自带全系列的参考文档。
 
 另外，TD 亦可在如下网址下载：
 
 https://pan.baidu.com/s/12kXWqTVMkle4W46Yhaz7mg
 
-.. figure:: http://odfef978i.bkt.clouddn.com/QQ_Group.jpg
+.. figure:: http://odfef978i.bkt.clouddn.com/QQ_Group_2.jpg
    :width: 250px
    :align: center
 
