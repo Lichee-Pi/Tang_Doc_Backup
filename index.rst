@@ -58,7 +58,7 @@
 
 另外，TD 亦可在如下网址下载：
 
-https://pan.baidu.com/s/12kXWqTVMkle4W46Yhaz7mg
+https://pan.baidu.com/s/1LaYo2UrDx6QPIc6VkfdsHA  提取码：2zlw
 
 .. figure:: http://odfef978i.bkt.clouddn.com/QQ_Group_2.jpg
    :width: 250px
