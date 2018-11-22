@@ -7,7 +7,7 @@
 
 荔枝糖不仅担起开源开发者们的期待，更志向于在国内推广RISC-V架构相关的开发与教育，向世界介绍中国的一款优秀开发板。
 
-.. figure:: http://odfef978i.bkt.clouddn.com/material.png
+.. figure:: https://fdvad021asfd8q.oss-cn-hangzhou.aliyuncs.com/migrate/material.png
   :width: 500px
   :align: center
 
@@ -33,12 +33,12 @@
 - 双排插针间距900mil， **兼容面包板开发** 。
 - 半孔引出额外 **40 IO**，整板引出 **130+ IO** 。
 
-.. figure:: http://odfef978i.bkt.clouddn.com/E203_function.png
+.. figure:: https://fdvad021asfd8q.oss-cn-hangzhou.aliyuncs.com/migrate/E203_function.png
   :align: center
 
   荔枝糖资源图
 
-.. figure:: http://odfef978i.bkt.clouddn.com/E203_pin.png
+.. figure:: https://fdvad021asfd8q.oss-cn-hangzhou.aliyuncs.com/migrate/E203_pin.png
   :align: center
 
   荔枝糖引脚图(旧板,底面丝印较小版本)
@@ -50,7 +50,7 @@
 
 2018年8月15日之前收到的板子预烧录的码流为旧版本IO分配，需要烧录 `新版本码流 <https://fdvad021asfd8q.oss-cn-hangzhou.aliyuncs.com/LicheeTang/LicheeTangNewIoMap_BitStream.bit>`_
 
-您可能需要这些来进一步了解荔枝糖： `EG4S20 Datasheet <http://odfef978i.bkt.clouddn.com/EG4S20_DataSheet_V1.4.pdf>`_ | `荔枝糖原理图 <http://odfef978i.bkt.clouddn.com/LicheeTang_RV.pdf>`_
+您可能需要这些来进一步了解荔枝糖： `EG4S20 Datasheet <https://fdvad021asfd8q.oss-cn-hangzhou.aliyuncs.com/migrate/EG4S20_DataSheet_V1.4.pdf>`_ | `荔枝糖原理图 <https://fdvad021asfd8q.oss-cn-hangzhou.aliyuncs.com/migrate/LicheeTang_RV.pdf>`_
 
 荔枝糖仍在不断地成长，对于外观、电路设计、文档内容甚至于荔枝糖的发展方向，我们欢迎您到 `荔枝糖 | 建议与讨论帖 <http://bbs.lichee.pro/d/61-->`_ 提出您宝贵的建议。
 
@@ -60,7 +60,7 @@
 
 https://pan.baidu.com/s/1LaYo2UrDx6QPIc6VkfdsHA  提取码：2zlw
 
-.. figure:: http://odfef978i.bkt.clouddn.com/QQ_Group_2.jpg
+.. figure:: https://fdvad021asfd8q.oss-cn-hangzhou.aliyuncs.com/migrate/QQ_Group_2.jpg
    :width: 250px
    :align: center
 
