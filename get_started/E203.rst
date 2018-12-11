@@ -3,7 +3,7 @@
 
 .. contents:: 本文目录
 
-.. note:: 现已经做好了  `虚拟机镜像 <https://pan.baidu.com/s/1_ODpTyHMaP7Lp5Fd3p2PEg>`_ ，可直接使用
+.. note:: 现已经做好了  虚拟机镜像 链接：https://pan.baidu.com/s/1LaYo2UrDx6QPIc6VkfdsHA 提取码：2zlw，可直接使用
 
 下载交叉编译工具链
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
