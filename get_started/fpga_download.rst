@@ -6,13 +6,13 @@ FPGA码流烧录
 
 1. 打开TD软件，选择 *download*
 
-    .. figure:: http://odfef978i.bkt.clouddn.com/E203_TD_download.png
+    .. figure:: https://fdvad021asfd8q.oss-cn-hangzhou.aliyuncs.com/migrate/E203_TD_download.png
         :width: 600px
         :align: center
 
 #. 添加 bitstream文件，选择 `LicheeTangNewIoMap\_BitStream.bit <https://fdvad021asfd8q.oss-cn-hangzhou.aliyuncs.com/LicheeTang/LicheeTangNewIoMap_BitStream.bit>`_ 或其他码流文件
 
-    .. figure:: http://odfef978i.bkt.clouddn.com/E203_TD_add.png
+    .. figure:: https://fdvad021asfd8q.oss-cn-hangzhou.aliyuncs.com/migrate/E203_TD_add.png
         :width: 600px
         :align: center
 
